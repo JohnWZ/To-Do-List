@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="utf-8">
+                <title>JavaScript notes</title>
+                <script> 
+                        function displayData(){
+                                document.getElementById("showdate").innerHTML=Date();
+                        }
+
+                        function changeContent(){
+                                x = document.getElementById("changeContent"); // find the element
+                                x.innerHTML = "New content appears!"; // change the HTML content
+                        }
+
+                        function changeColor(){
+                                document.getElementById("changeColor").style.color="#ff0000";
+                        }
+
+                        function isNumber(){
+                                var x = document.getElementById("inputNumber").value;
+                                if (x==""||isNaN(x))    // if input is empty or not a number
+                                {
+                                        alert("Input is not a number.");
+                                }
+                        }
+                        function isNumber2() // a more rigorous way to check if it is a number
+                        {
+                                var x=document.getElementById("demo").value;
+                                if(isNaN(x)||x.replace(/(^\s*)|(\s*$)/g,"")==""){
+                                        alert("不是数字");
+                                }
+                        }
+
+                        /* 
+                        avaScript 可以通过不同的方式来输出数据：
+                        使用 window.alert() 弹出警告框。        // window.alert(5+6);
+                        使用 document.write() 方法将内容写到 HTML 文档中。 // 操作HTML元素,也就是常见的.innerHTML("Something");
+                        使用 innerHTML 写入到 HTML 元素。       // 写入HTML文档,document.write(Date());
+                        使用 console.log() 写入到浏览器的控制台。
+                        */
+                        a = 5;
+                        b = 6;
+                        c = a + b;
+                        console.log("a+b=" + c); // 按F12打开console可以查看和修改结果
+                        
+// 语法,数据类型,string操作详见runoob或者W3C school
+// 有任何问题直接上Chrome的控制台debug          
+                </script>
+        </head>
+        <body>
+                <h1>Javascript notes</h1>
+                <p id="showdate">Click this button to show date:</p>
+                <button type="button" onclick="displayData()">Show data</button>
+
+               
+        </body>
+</html>
